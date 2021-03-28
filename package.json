@@ -1,0 +1,25 @@
+{
+  "name": "prettier-sql-oracle",
+  "version": "0.0.0",
+  "description": "Prettier plugin for Oracle SQL",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cofad/prettier-sql-oracle.git"
+  },
+  "keywords": [
+    "prettier",
+    "plugin",
+    "oracle",
+    "sql"
+  ],
+  "author": "Will Warner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cofad/prettier-sql-oracle/issues"
+  },
+  "homepage": "https://github.com/cofad/prettier-sql-oracle#readme"
+}
