@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "download-lexer": "curl https://raw.githubusercontent.com/antlr/grammars-v4/master/sql/plsql/PlSqlLexer.g4 > antlr4-grammars/PlSqlLexer.g4",
-    "download-parser": "curl https://raw.githubusercontent.com/antlr/grammars-v4/master/sql/plsql/PlSqlParser.g4 > antlr4-grammars/PlSqlParser.g4"
+    "download-parser": "curl https://raw.githubusercontent.com/antlr/grammars-v4/master/sql/plsql/PlSqlParser.g4 > antlr4-grammars/PlSqlParser.g4",
+    "download-lexer-base": " curl https://raw.githubusercontent.com/antlr/grammars-v4/master/sql/plsql/JavaScript/PlSqlBaseLexer.js > antlr4-grammars/PlSqlBaseLexer.js",
+    "download-parser-base": "curl https://raw.githubusercontent.com/antlr/grammars-v4/master/sql/plsql/JavaScript/PlSqlBaseParser.js > antlr4-grammars/PlSqlBaseParser.js"
   },
   "repository": {
     "type": "git",
