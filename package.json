@@ -30,6 +30,7 @@
   "homepage": "https://github.com/cofad/prettier-sql-oracle#readme",
   "dependencies": {
     "antlr4": "^4.9.2",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.3"
   }
 }
