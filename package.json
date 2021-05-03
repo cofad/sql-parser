@@ -1,7 +1,7 @@
 {
-  "name": "prettier-sql-oracle",
+  "name": "sql-parser",
   "version": "0.0.0",
-  "description": "Prettier plugin for Oracle SQL",
+  "description": "SQL Parser implemented using Antlr4",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,24 +14,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cofad/prettier-sql-oracle.git"
+    "url": "git+https://github.com/cofad/sql-parser.git"
   },
   "keywords": [
-    "prettier",
-    "plugin",
+    "antlr4",
     "oracle",
-    "sql"
+    "sql",
   ],
   "author": "Will Warner",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cofad/prettier-sql-oracle/issues"
+    "url": "https://github.com/cofad/sql-parser/issues"
   },
-  "homepage": "https://github.com/cofad/prettier-sql-oracle#readme",
+  "homepage": "https://github.com/cofad/sql-parser#readme",
   "dependencies": {
-    "antlr4": "^4.9.2",
-    "prettier": "^2.2.1",
-    "typescript": "^4.2.3"
+    "antlr4": "^4.9.2"
   },
   "type": "module"
 }
