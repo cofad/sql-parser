@@ -31,5 +31,8 @@
   "dependencies": {
     "antlr4": "^4.9.2"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "replace-in-file": "^6.2.0"
+  }
 }
