@@ -4,7 +4,14 @@ A [Prettier](https://prettier.io/) plugin for Oracle PL/SQL.
 
 ## Table of Contents
 
+1. [Prerequisites](#prerequisites)
 1. [Working Notes](#working-notes)
+
+## Prerequisites
+
+1. [Antlr4](https://www.antlr.org/)
+1. [NodeJs](nodejs.org)
+1. NPM
 
 ## Working Notes
 
