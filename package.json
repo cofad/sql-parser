@@ -10,7 +10,8 @@
     "download-lexer-base": " curl https://raw.githubusercontent.com/antlr/grammars-v4/master/sql/plsql/JavaScript/PlSqlBaseLexer.js > antlr4-grammars/PlSqlBaseLexer.js",
     "download-parser-base": "curl https://raw.githubusercontent.com/antlr/grammars-v4/master/sql/plsql/JavaScript/PlSqlBaseParser.js > antlr4-grammars/PlSqlBaseParser.js",
     "build-lexer": "java org.antlr.v4.Tool -Dlanguage=JavaScript -o antlr4-grammars antlr4-grammars/PlSqlLexer.g4",
-    "build-parser": "java org.antlr.v4.Tool -Dlanguage=JavaScript -o antlr4-grammars antlr4-grammars/PlSqlParser.g4"
+    "build-parser": "java org.antlr.v4.Tool -Dlanguage=JavaScript -o antlr4-grammars antlr4-grammars/PlSqlParser.g4",
+    "download-and-build": "npm run download-lexer && npm run  download-parser && npm run download-lexer-base && npm run download-parser-base && npm run build-lexer && npm run build-parser"
   },
   "repository": {
     "type": "git",
