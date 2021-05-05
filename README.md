@@ -16,23 +16,8 @@ A [Prettier](https://prettier.io/) plugin for Oracle PL/SQL.
 ## Working Notes
 
 1. Install [Antlr4](https://github.com/antlr/antlr4/blob/master/doc/getting-started.md) to build lexer/parser.
-1. Download PlSqlLexer.g4 and PlSqlParser.g4 from <https://github.com/antlr/grammars-v4/blob/master/sql/plsql>.
+1. Download and build the lexer/parser:
 
    ```cmd
-   npm run download-lexer
-   npm run download-parser
-   ```
-
-1. Download JavaScript modules from <https://github.com/antlr/grammars-v4/tree/master/sql/plsql/JavaScript>.
-
-   ```cmd
-   npm run download-lexer-base
-   npm run download-parser-base
-   ```
-
-1. Build lexer and parser
-
-   ```cmd
-   npm run build-parser
-   npm run build-lexer
+   npm run download-and-build
    ```
