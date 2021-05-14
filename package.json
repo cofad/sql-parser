@@ -5,18 +5,16 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rd /S /Q .\\antlr4 & mkdir antlr4",
+    "clean": "rimraf antlr4 && mkdir antlr4",
     "download-lexer": "curl https://raw.githubusercontent.com/antlr/grammars-v4/master/sql/plsql/PlSqlLexer.g4 > antlr4/PlSqlLexer.g4",
     "download-parser": "curl https://raw.githubusercontent.com/antlr/grammars-v4/master/sql/plsql/PlSqlParser.g4 > antlr4/PlSqlParser.g4",
-    "fix-parser": ".\\node_modules\\.bin\\replace-in-file /let\\s_alt/g \"var _alt\" .\\antlr4\\PlSqlParser.js --isRegex",
-    "rename-lexer-base": "ren .\\antlr4\\PlSqlBaseLexer.js PlSqlLexerBase.js && .\\node_modules\\.bin\\replace-in-file /PlSqlBaseLexer/g \"PlSqlLexerBase\" .\\antlr4\\PlSqlLexerBase.js --isRegex",
-    "rename-parser-base": "ren .\\antlr4\\PlSqlBaseParser.js PlSqlParserBase.js  && .\\node_modules\\.bin\\replace-in-file /PlSqlBaseParser/g \"PlSqlParserBase\" .\\antlr4\\PlSqlParserBase.js --isRegex",
-    "download-lexer-base": " curl https://raw.githubusercontent.com/antlr/grammars-v4/master/sql/plsql/JavaScript/PlSqlBaseLexer.js > antlr4/PlSqlBaseLexer.js",
-    "download-parser-base": "curl https://raw.githubusercontent.com/antlr/grammars-v4/master/sql/plsql/JavaScript/PlSqlBaseParser.js > antlr4/PlSqlBaseParser.js",
-    "build-lexer": "java org.antlr.v4.Tool -Dlanguage=JavaScript -o antlr4 antlr4/PlSqlLexer.g4",
-    "build-parser": "java org.antlr.v4.Tool -Dlanguage=JavaScript -o antlr4 antlr4/PlSqlParser.g4",
-    "download-and-build": "npm run clean && npm run download-lexer && npm run download-parser && npm run download-lexer-base && npm run download-parser-base && npm run build-lexer && npm run build-parser && npm run fix-parser && npm run rename-lexer-base && npm run rename-parser-base",
-    "postinstall": "download-and-build"
+    "download-lexer-base": " curl https://raw.githubusercontent.com/antlr/grammars-v4/master/sql/plsql/JavaScript/PlSqlLexerBase.js > antlr4/PlSqlLexerBase.js",
+    "download-parser-base": "curl https://raw.githubusercontent.com/antlr/grammars-v4/master/sql/plsql/JavaScript/PlSqlParserBase.js > antlr4/PlSqlParserBase.js",
+    "build-lexer": "java org.antlr.v4.Tool -Dlanguage=JavaScript antlr4/PlSqlLexer.g4 -o antlr4",
+    "build-parser": "java org.antlr.v4.Tool -Dlanguage=JavaScript antlr4/PlSqlParser.g4 -o antlr4",
+    "download-and-build": "npm run clean && npm run download-lexer && npm run download-parser && npm run download-lexer-base && npm run download-parser-base && npm run build-lexer && npm run build-parser",
+    "postinstall": "npm run download-and-build",
+    "start": "node test/test.cjs"
   },
   "repository": {
     "type": "git",
@@ -38,6 +36,6 @@
   },
   "type": "module",
   "devDependencies": {
-    "replace-in-file": "^6.2.0"
+    "rimraf": "^3.0.2"
   }
 }
