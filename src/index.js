@@ -1,6 +1,6 @@
 import antlr4 from "antlr4";
-import PlSqlLexer from "../antlr4-grammars/PlSqlLexer.js";
-import PlSqlParser from "../antlr4-grammars/PlSqlParser.js";
+import PlSqlLexer from "../antlr4/PlSqlLexer.js";
+import PlSqlParser from "../antlr4/PlSqlParser.js";
 
 export function parse(code) {
   code = code.toUpperCase();
