@@ -4,7 +4,7 @@
   "description": "SQL Parser implemented using Antlr4",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node test/test.cjs",
     "clean": "rimraf antlr4 && mkdir antlr4 && mkdir \"antlr4/lib\"",
     "download-antlr": "curl https://www.antlr.org/download/antlr-4.9.2-complete.jar -o ./antlr4/lib/antlr-4.9.2-complete.jar",
     "download-lexer": "curl https://raw.githubusercontent.com/antlr/grammars-v4/master/sql/plsql/PlSqlLexer.g4 > antlr4/PlSqlLexer.g4",
@@ -14,8 +14,7 @@
     "build-lexer": "cd antlr4 && java -jar ./lib/antlr-4.9.2-complete.jar -Dlanguage=JavaScript PlSqlLexer.g4 && cd ..",
     "build-parser": " cd antlr4 && java -jar ./lib/antlr-4.9.2-complete.jar -Dlanguage=JavaScript PlSqlParser.g4 && cd ..",
     "download-and-build": "npm run clean && npm run download-antlr && npm run download-lexer && npm run download-parser && npm run download-lexer-base && npm run download-parser-base && npm run build-lexer && npm run build-parser",
-    "postinstall": "npm run download-and-build",
-    "start": "node test/test.cjs"
+    "postinstall": "npm run download-and-build"
   },
   "repository": {
     "type": "git",
